@@ -3,18 +3,11 @@
 ## Getting Started
 ### Installations:
 #### REQUIRED
- * Node [node installation](https://nodejs.org/en/download/)
- * Yarn [yarn installation](https://classic.yarnpkg.com/en/docs/install/#mac-stable)
  * Docker [Docker installation](https://docs.docker.com/engine/install/)
 
 ## Running locally
 * Once Node, Yarn and Docker are installed Run the following:
-    * Command in root directory: `sh init.sh`
-* `sh init.sh` will kick off multiple commands:
-    * Building all docker images
-    * Deploying each docker-compose service (Dynamo DB, Application)
-    * Installation of packages locally
-    * Running DB seeding script
+    * Command in root directory: `docker compose up`
 
 * Visit http://localhost:3000 in your browser
 

@@ -4,7 +4,7 @@ AWS.config.update({
     region: "localhost",
     accessKeyId: 'xxxx',
     secretAccessKey: 'xxxx',
-    endpoint: "http://localhost:8000"
+    endpoint: "http://dynamodb:8000"
 });
 
 const createTable = async () => {
