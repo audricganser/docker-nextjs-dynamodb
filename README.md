@@ -6,7 +6,9 @@
  * Docker [Docker installation](https://docs.docker.com/engine/install/)
 
 ## Running locally
-* Once Node, Yarn and Docker are installed Run the following:
+* Once Docker is installed Run the following:
+    * Skip this step if you're doing a fresh installation
+        * Run `docker compose build --no-cache`
     * Command in root directory: `docker compose up`
 
 * Visit http://localhost:3000 in your browser
@@ -28,10 +30,6 @@ Usually I would spin up a test DB in a cloudprovider and work off of that locall
 ### Next.js API?
 
 Tradeoff between a POC/MVP and a full fledged scalable app. Serverless would be my preference for the service.
-
-### shell script for seeding
-
-This could have been done within the Dockerfile while the Dynamo Image was building but it seemed faster just to write a quick node script to do this.
 
 ### Environment Variables
 
