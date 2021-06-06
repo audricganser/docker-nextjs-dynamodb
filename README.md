@@ -8,8 +8,8 @@
 
 ## Running locally
 * Once Node, Yarn and Docker are installed Run the following:
-    * Command in root direcotry: `sh init.sh`
-* Init will kick off multiple commands
+    * Command in root directory: `sh init.sh`
+* `sh init.sh` will kick off multiple commands:
     * Building all docker images
     * Deploying each docker-compose service (Dynamo DB, Application)
     * Installation of packages locally
