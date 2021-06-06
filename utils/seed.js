@@ -29,13 +29,14 @@ const createTable = async () => {
         TableName: "Forest"
     };
 
-    await dynamodb.createTable(params, function (err, data) {
-        if (err) {
-            console.error("Unable to create table. Error JSON:", JSON.stringify(err, null, 2));
-        } else {
-            console.log("Created table. Table description JSON:", JSON.stringify(data, null, 2));
-        }
-    }).promise();
+    console.log('creating table')
+
+    try {
+        const data = await dynamodb.createTable(params).promise()
+        console.log("Created table. Table description JSON:", JSON.stringify(data, null, 2));
+    } catch (err) {
+        console.error("Unable to Create Table. Table description JSON:", JSON.stringify(err, null, 2));       
+    }
 }
 
 const addItems = async () => {
@@ -107,7 +108,7 @@ const addItems = async () => {
         }
     ]
 
-    items.forEach(async(item) => {
+    await items.forEach(async(item) => {
         const params = {
             TableName: "Forest",
             Item: {
@@ -117,19 +118,26 @@ const addItems = async () => {
             }
         };
 
-        await dynamodb.put(params, function (err, data) {
-            if (err) {
-                console.error("Unable to add item. Error JSON:", JSON.stringify(err, null, 2));
-            } else {
-                console.log("Added item:", JSON.stringify(data, null, 2));
-            }
-        }).promise();
+        try {
+            const data = await dynamodb.put(params).promise()
+            console.log("Added item. description JSON:", JSON.stringify(data, null, 2));
+        } catch (err) {
+            console.error("Unable to add item. Error JSON:", JSON.stringify(err, null, 2));
+        }
     })
 }
 
 const init = async () => {
-    await createTable()
-    await addItems()
+    try {
+        await createTable()
+    } catch (err) {
+        console.log('error creating table: ', err )
+    }
+    try {
+        await addItems()
+    }catch (err) {
+        console.log('error adding items: ', err)
+    }
 }
 
 init()

@@ -2,14 +2,16 @@
 
 ## Getting Started
 ### Installations:
- *Node[node](https://nodejs.org/en/download/)
- *Docker [Docker](https://docs.docker.com/engine/install/)
+ * Node [node](https://nodejs.org/en/download/)
+ * Docker [Docker](https://docs.docker.com/engine/install/)
 
 ## Running locally
 * Once Node and Docker are installed Run the following:
     * Command: `sh init.sh`
 
 * Visit http://localhost:3000 in your browser
+
+* Shutdown: `docker compose down`
 
 ## Notes
 ### Why Next.js
