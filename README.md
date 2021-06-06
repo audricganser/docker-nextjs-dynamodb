@@ -2,6 +2,7 @@
 
 ## Getting Started
 ### Installations:
+#### REQUIRED
  * Node [node installation](https://nodejs.org/en/download/)
  * Yarn [yarn installation](https://classic.yarnpkg.com/en/docs/install/#mac-stable)
  * Docker [Docker installation](https://docs.docker.com/engine/install/)
@@ -38,3 +39,11 @@ Tradeoff between a POC/MVP and a full fledged scalable app. Serverless would be 
 ### shell script for seeding
 
 This could have been done within the Dockerfile while the Dynamo Image was building but it seemed faster just to write a quick node script to do this.
+
+### Environment Variables
+
+Working with Docker Compose causes some networking hurdles. For instance, connecting to the Dynamodb instance is usually done with `http://localhost:8000` but within a docker compse you have to connect via the service name `http: dynamodb:8000`.
+
+I Havent set up any environment variables to detect if this is running within docker compose or both containers running seperately on your local machine.
+
+If you did want to run both containers seperately on you local machine you would have to change the Dynamo endpoint to `http://localhost:8000` in order to connect.
