@@ -2,12 +2,13 @@
 
 ## Getting Started
 ### Installations:
- * Node [node](https://nodejs.org/en/download/)
- * Docker [Docker](https://docs.docker.com/engine/install/)
+ * Node [node installation](https://nodejs.org/en/download/)
+ * Yarn [yarn installation](https://classic.yarnpkg.com/en/docs/install/#mac-stable)
+ * Docker [Docker installation](https://docs.docker.com/engine/install/)
 
 ## Running locally
-* Once Node and Docker are installed Run the following:
-    * Command: `sh init.sh`
+* Once Node, Yarn and Docker are installed Run the following:
+    * Command in root direcotry: `sh init.sh`
 
 * Visit http://localhost:3000 in your browser
 
