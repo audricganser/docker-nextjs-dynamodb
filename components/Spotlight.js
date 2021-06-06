@@ -23,7 +23,7 @@ const Spotlight = (props) => {
           <div>
             <ul><b>Forest Type:</b> {data.info.type}</ul>
           </div>
-            <ul><b>Long:</b> {data.info.location.longitude}, Lat: {data.info.location.latitude}</ul>
+            <ul><b>Long:</b> {data.info.location.longitude}, <b>Lat</b>: {data.info.location.latitude}</ul>
           <div>
             <ul><b>Area Covered:</b> {data.info.area_covered} ha</ul>
           </div>
