@@ -9,6 +9,11 @@
 ## Running locally
 * Once Node, Yarn and Docker are installed Run the following:
     * Command in root direcotry: `sh init.sh`
+* Init will kick off multiple commands
+    * Building all docker images
+    * Deploying each docker-compose service (Dynamo DB, Application)
+    * Installation of packages locally
+    * Running DB seeding script
 
 * Visit http://localhost:3000 in your browser
 
