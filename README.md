@@ -42,7 +42,8 @@ This could have been done within the Dockerfile while the Dynamo Image was build
 
 ### Environment Variables
 
-Working with Docker Compose causes some networking hurdles. For instance, connecting to the Dynamodb instance is usually done with `http://localhost:8000` but within a docker compse you have to connect via the service name `http: dynamodb:8000`.
+Working with Docker Compose causes some networking hurdles. For instance, connecting to the Dynamodb instance is usually done with `http://localhost:8000` but within a docker compse you have to connect via the service name 
+`http://dynamodb:8000`.
 
 I Havent set up any environment variables to detect if this is running within docker compose or both containers running seperately on your local machine.
 
