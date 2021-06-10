@@ -1,4 +1,4 @@
-# Pachama Project
+# Docker + Next.js + Docker
 
 ## Getting Started
 ### Installations:
@@ -15,21 +15,6 @@
 
 * Shutdown: `docker compose down`
 
-## Notes
-### Why Next.js
-* SEO
-* Speed
-* API integration
-* Prebuilt routes
-
-### Docker-compose?
-
-Most difficult part of this project was docker compose and its networking between the DB and the app.
-Usually I would spin up a test DB in a cloudprovider and work off of that locally.
-
-### Next.js API?
-
-Tradeoff between a POC/MVP and a full fledged scalable app. Serverless would be my preference for the service.
 
 ### Environment Variables
 
