@@ -1,7 +1,6 @@
 
 import styles from '../styles/Home.module.css'
 import '../styles/globals.css'
-import { Header, Footer } from '../components/index'
 import Head from 'next/head'
 
 function MyApp({ Component, pageProps }) {
