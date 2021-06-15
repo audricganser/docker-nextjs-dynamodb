@@ -7,7 +7,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Pachama Forests</title>
+        <title>Docker Nextjs Dynamo</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
