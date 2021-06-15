@@ -14,7 +14,7 @@ const dynamodb = new aws.DynamoDB.DocumentClient();
 
 const getAll = async () => {
   var params = {
-    TableName: 'Forest', // give it your table name
+    TableName: 'TestTable', // give it your table name
     Select: "ALL_ATTRIBUTES"
   };
 
