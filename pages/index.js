@@ -8,8 +8,8 @@ const Home = () => {
 
   useEffect(() => {
     const init = async () => {
-      const { data } = await axios.get('/api/v1/data')
-      setData(data.Items)
+      const testData = await axios.get('/api/v1/data')
+      setData(testData.data.Items[0].message)
     }
     init()
     setBusy(false)
@@ -18,7 +18,7 @@ const Home = () => {
 
   return (
     <div className={styles.container}>
-      {!isBusy ? data[0].message : 'loading...'}
+      {!isBusy ? data : 'loading...'}
     </div>
   )
 }
